@@ -3,7 +3,7 @@ from __future__ import absolute_import
 import torch.nn as nn
 from models.sem_graph_conv import SemGraphConv
 from models.graph_non_local import GraphNonLocal
-
+from functools import reduce
 
 class _GraphConv(nn.Module):
     def __init__(self, adj, input_dim, output_dim, p_dropout=None):
